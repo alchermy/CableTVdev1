@@ -1,0 +1,26 @@
+{
+  "name": "kbtv",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@line/liff": "^2.23.1",
+    "axios": "^1.6.7",
+    "sweetalert2": "^11.10.5",
+    "vue": "^3.3.11",
+    "vue-router": "^4.0.13",
+    "vuetify": "^3.5.2",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vue-tsc": "^1.8.25"
+  }
+}
