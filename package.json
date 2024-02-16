@@ -11,6 +11,7 @@
   "dependencies": {
     "@line/liff": "^2.23.1",
     "axios": "^1.6.7",
+    "moment-timezone": "^0.5.45",
     "sweetalert2": "^11.10.5",
     "vue": "^3.3.11",
     "vue-router": "^4.0.13",

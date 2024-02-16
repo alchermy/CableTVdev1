@@ -163,10 +163,7 @@ export default {
         });
     },
     backBtn() {
-      this.$router.push({
-        path: "/AccountList",
-        query: { lineID: this.lineID },
-      });
+      this.$router.go(-1);
     },
   },
 };
