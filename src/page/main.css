@@ -281,8 +281,8 @@ a {
 
 .coupon-card img {
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   object-fit: contain;
   margin: auto 0;
 }
@@ -294,7 +294,7 @@ a {
   height: 35px;
   border-radius: 50%;
   position: absolute;
-  left: 95px;
+  left: 85px;
   transform: translatex(-25%);
 }
 
@@ -312,7 +312,7 @@ a {
   height: 75%;
   position: relative;
   top: 50%;
-  left: 22px;
+  left: 15px;
   transform: translate(0, -50%);
 }
 
@@ -324,6 +324,10 @@ a {
 .svg-icon-1x svg {
   width: 20px;
   height: 20px;
+}
+
+.svg-icon-purple svg [fill] {
+  fill: #4e2578;
 }
 
 div:where(.swal2-container)
@@ -371,9 +375,21 @@ div:where(.swal2-container)
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(147 121 173) 0px 0px 0px 3px;
 }
 
-.card__input:disabled ~ .card-bg {
+.card__input:checked ~ .coupon-card {
+  border-image: linear-gradient(#b6cf60, #ecffab) 35;
+}
+
+.card__input:disabled ~ .card-bg,
+.card__input:disabled ~ .coupon-card {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.coupon-card .label__text {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .label__text {
@@ -409,12 +425,14 @@ div:where(.swal2-container)
   border: 5px solid rgba(0, 0, 0, 0.2);
 }
 
-.card__input:checked ~ .card-bg .label__text .label__check {
+.card__input:checked ~ .card-bg .label__text .label__check,
+.card__input:checked ~ .coupon-card .label__text .label__check {
   -webkit-animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
   animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
 }
 
-.card__input:checked ~ .card-bg .label__text .label__check .icon {
+.card__input:checked ~ .card-bg .label__text .label__check .icon,
+.card__input:checked ~ .coupon-card .label__text .label__check .icon {
   opacity: 1;
   transform: scale(0);
   color: white;
@@ -528,6 +546,68 @@ div:where(.swal2-container)
   }
 }
 
+.list-box {
+  background: #fff;
+  border-radius: 10px;
+}
+
+.list-data {
+  padding: 0 1rem;
+}
+
+.list-data:nth-child(1) {
+  padding-top: 0.5rem;
+}
+
+.list-data:nth-last-child(1) {
+  padding-bottom: 0.5rem;
+}
+
+.list-payment {
+  position: relative;
+  top: -140px;
+  margin-bottom: -140px;
+}
+
+.btn-delete {
+  color: #f64e60;
+  background-color: #ffe2e5;
+  border-color: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.navbar-bottom {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 1;
+  bottom: 0;
+  border-radius: 30px 30px 0 0;
+  box-shadow: rgb(146 146 146 / 35%) 0px 5px 15px;
+}
+
+.po-relative {
+  position: relative;
+  z-index: 1;
+}
+
+.border-b {
+  border-bottom: 1px solid #e3e2e2;
+  margin: 0.6rem 0;
+}
+
+.list-box .d-flex-column:nth-last-child(1) .border-b {
+  border: 0;
+  margin: 0;
+}
+
 .pr-m-35 {
   position: relative;
   top: -35px;
@@ -569,6 +649,10 @@ div:where(.swal2-container)
 
 .d-flex {
   display: flex;
+}
+
+.align-items-center {
+  align-items: center;
 }
 
 .justify-content-between {
@@ -613,6 +697,10 @@ div:where(.swal2-container)
 
 .text-danger {
   color: #ff5d5d;
+}
+
+.text-purple {
+  color: #6e4a92;
 }
 
 .text-center {
