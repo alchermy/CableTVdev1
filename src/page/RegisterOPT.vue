@@ -40,18 +40,12 @@
                     <div class="card mt-5">
                         <div class="py-10 px-5">
                             <form @submit.prevent="submitOTP" class="form-otp">
-                                <input v-model="otp[0]" class="input-form otp" type="text" @keyup="tabChange(1)"
-                                    inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
-                                <input v-model="otp[1]" class="input-form otp" type="text" @keyup="tabChange(2)"
-                                    inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
-                                <input v-model="otp[2]" class="input-form otp" type="text" @keyup="tabChange(3)"
-                                    inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
-                                <input v-model="otp[3]" class="input-form otp" type="text" @keyup="tabChange(4)"
-                                    inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
-                                <input v-model="otp[4]" class="input-form otp" type="text" @keyup="tabChange(5)"
-                                    inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
-                                <input v-model="otp[5]" class="input-form otp" type="text" @keyup="tabChange(6)"
-                                    inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
+                                <input v-model="otp[0]" class="input-form otp" type="text" @keyup="tabChange(1)" inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
+                                <input v-model="otp[1]" class="input-form otp" type="text" @keyup="tabChange(2)" inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
+                                <input v-model="otp[2]" class="input-form otp" type="text" @keyup="tabChange(3)" inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
+                                <input v-model="otp[3]" class="input-form otp" type="text" @keyup="tabChange(4)" inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
+                                <input v-model="otp[4]" class="input-form otp" type="text" @keyup="tabChange(5)" inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
+                                <input v-model="otp[5]" class="input-form otp" type="text" @keyup="tabChange(6)" inputmode="numeric" autocapitalize="none" maxlength="1" @keypress="isNumber($event)">
                             </form>
                             <div class="d-flex">
                                 <a href="#" class="btn-gradient" @click="submitOTP">ยืนยัน OTP</a>
@@ -196,7 +190,7 @@ export default {
                 }
             }, 1000);
         },
-// ขอ OTP ใหม่
+        // ขอ OTP ใหม่
         resendOTP() {
             if (this.countdownTime === 0) {
                 // ส่ง request ขอรหัส OTP ใหม่ที่นี่
